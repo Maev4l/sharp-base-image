@@ -1,8 +1,8 @@
-ARG NODE_VERSION=20.10.0
+ARG NODE_VERSION=22.17.1
 ARG SHARP_VERSION=0.33.0
 ARG FUNCTION_DIR="/function"
 
-FROM node:${NODE_VERSION}-bookworm-slim as build
+FROM node:${NODE_VERSION}-bookworm-slim AS build
 # Install build dependencies
 RUN apt-get update && apt-get install -y \
     cmake \
